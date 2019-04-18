@@ -7,11 +7,11 @@ route = routers.DefaultRouter()
 
 #register new address
 route.register(r'student', views.StudentViewSet)
-#route.register(r'add_student', views.AddStudentViewSet)
 
 #register upper route and add
 urlpatterns = [
     url('api/', include(route.urls)),
     url(r'_ping', views._ping),
     url(r'query_ip',views.query_ip),
+    url(r'add_student',views.add_student)
 ]
