@@ -1,0 +1,11 @@
+from django.db import models
+
+# Create your models here.
+class Student(models.Model):
+    name = models.CharField(u'name', max_length=100, default='no_name')
+    age = models.CharField(u'age', max_length=10, default='0')
+
+    def __unicode_(self):
+        return '%d: %s' % (self.pk, self.name)
+
+
